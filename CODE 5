@@ -1,0 +1,228 @@
+CHECK IF A FILE EXISTS BEFORE READING FROM IT.
+
+FILE HUMNE NAHI BANAYI HAI OR HUM FILE KA NAAM LIKH KAR ENTER KARTE HAI 
+TO LIKH KAR AYEGA FILE DOESN'T EXIST.
+
+OR HUME NEW FILE BANANA HAI TO NewTest.txt me r ki jagah w likh denge 
+
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("NewTest.txt", "r");
+   if(fptr == NULL) {
+      printf("file doesn't exist\n");
+   } else {
+
+      fclose(fptr);
+   }
+
+   return 0;
+}
+
+
+
+READIND FROM A FILE 
+
+MAINE 2ND FILE ME APPLE LIKHA HAI OR MUJHE
+1ST FILE SE APPLE PRINT KARANA HAI TO HUM
+YE CODE USE KARENGE 
+
+
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Test.txt", "r");
+    
+    char ch;
+    fscanf(fptr, "%c", &ch);
+    printf("character = %c\n",ch);
+    fscanf(fptr, "%c", &ch);
+    printf("character = %c\n",ch);
+    fscanf(fptr, "%c", &ch);
+    printf("character = %c\n",ch);
+    fscanf(fptr, "%c", &ch);
+    printf("character = %c\n",ch);
+    fscanf(fptr, "%c", &ch);
+    printf("character = %c\n",ch);
+   
+   return 0;
+} 
+
+
+
+MAINE 2ND FILE ME KUCH NUMBER LIKHA HU OR MUJHE
+1ST FILE SE NUMBER PRINT KARANA HAI TO HUM
+YE CODE USE KARENGE 
+
+
+
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Test.txt", "r");
+    
+    int ch;
+    fscanf(fptr, "%d", &ch);
+    printf("character = %d\n",ch);
+    fscanf(fptr, "%d", &ch);
+    printf("character = %d\n",ch);
+    fscanf(fptr, "%d", &ch);
+    printf("character = %d\n",ch);
+     
+     fclose(fptr);
+   return 0;
+} 
+
+
+
+
+
+2nd FILE ME LIKHA HAI APPLE OR MUJHE 1ST FILE SE APPLE 
+KO HATA KAR KE MANGO LIKHNA HAI TO HUM YE CODE USE KARENGE
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Test.txt", "w");
+    
+    fprintf(fptr, "%c", 'M');
+    fprintf(fptr, "%c", 'A');
+    fprintf(fptr, "%c", 'N');
+    fprintf(fptr, "%c", 'G');
+    fprintf(fptr, "%c", 'O');
+     fclose(fptr);
+   return 0;
+} 
+
+
+
+
+
+
+
+END OF FILE 
+
+2ND FILE ME KUCH PARAGRAPH LIKHA HAI OR MUJHE WO PARAGRAPH HELLO.C
+SE READ KARNA HAI TO HUM YE CODE USE KARENGE 
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Test.txt", "r");
+    char ch;
+    ch = fgetc(fptr);
+     while(ch != EOF) {
+      printf("%c", ch);
+      ch = fgetc(fptr);
+     }
+     printf("\n");
+
+     fclose(fptr);
+   return 0;
+} 
+
+
+
+
+Q61 ; MAKE A PROGRAMME TO READ 5 INTEGERS FROM A FILE
+
+     2nd FILE ME 1 TO 5 NUMBER LIKHE HAI OR MUJHE 1 TO 5 NUMBER 
+     FIRST FILE ME PRINT KARNA HAI TO HUM YE CODE USE KARENGE
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Test.txt", "r");
+     int n;
+     fscanf(fptr, "%d", &n);
+     printf("number = %d\n", n);
+     fscanf(fptr, "%d", &n);
+     printf("number = %d\n", n);
+     fscanf(fptr, "%d", &n);
+     printf("number = %d\n", n);
+     fscanf(fptr, "%d", &n);
+     printf("number = %d\n", n);
+     fscanf(fptr, "%d", &n);
+     printf("number = %d\n", n);
+
+     fclose(fptr);
+   return 0;
+} 
+
+
+
+
+
+MAKE A PROGRAMME TO INPUT STUDENT INFORMATION FROM 
+A USER & ENTER IT TO A FILE 
+
+2nd FILE ME MUJHE MERA NAME , AGE , CGPA LIKHNA HAI TO HUM YE CODE USE KARENGE 
+
+ 
+ # include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Test.txt", "w");
+   
+char name[100];
+int age;
+float cgpa;
+
+printf("enter name :");
+scanf("%s", name);
+printf("enter age :");
+scanf("%d", &age);
+printf("enter cgpa :");
+scanf("%f", &cgpa);
+
+fprintf (fptr, "student name : %s\n" , name);
+fprintf (fptr, "student age : %d\n" , age);
+fprintf (fptr, "student cgpa : %f\n" , cgpa);
+
+     fclose(fptr);
+   return 0;
+} 
+
+
+
+
+WRITE A PROOGRAMME TO WRITE ALL THE ODD NUMBERS
+FROM 1 TO N IN A FILE.
+IF N=10
+
+
+1 TO 10 KE BICH ME JITNE BHI ODD NUMBER HAI
+WO 2ND FILE ME PRINT KARANA HAI TO YE CODE USSE
+KARENGE
+
+
+
+# include <stdio.h>
+
+int main() {
+   FILE *fptr;
+   fptr = fopen("Odd.txt", "w");
+   
+ int n;
+ printf("enter n : ");
+ scanf("%d", &n);
+
+ for(int i=1; i<=n; i++) {
+   if(i % 2 != 0) {
+      fprintf(fptr, "%d\n", i);
+   }
+ }
+
+     fclose(fptr);
+   return 0;
+} 

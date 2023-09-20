@@ -1,0 +1,212 @@
+CHECK IF A GIVEN CHARACTER IS PRESENT IN A STRING OR NOT
+CHARACTER IS APNA COLLEGE 
+ 
+APNA COLLEGE ME JO ALPHABET HAI WO HI HUM CHAR CH ME LIKHENGE TO CHARACTER 
+IS PRESENT LIKH KAR AYEGA LIKE A, N, O, L, E , P
+AGAR HUM X , Y ,Q etc  LIKHENGE TO CHARACTER IS NOT PRESENT LIKH KAR AYEGA 
+
+# include <stdio.h>
+# include <string.h>
+
+void checkChar(char str[], char ch);
+
+int main() {
+    char str[] = "ApnaCollege";
+    char ch = 'e';
+    checkChar(str, ch);
+}
+
+void checkChar(char str[], char ch) {
+    for(int i=0; str[i] !='\0'; i++){
+        if(str[i] == ch) {
+            printf("character is present!");
+            return;
+        }
+    }
+    printf("character is NOT present!");
+}
+
+
+
+
+
+CHAPTER 8 STRINGS 
+HOMEWORK SET
+
+Q1: WRITE A PROGRAMME TO CONVERT ALL LOWER CLASS VOWELS TO UPPERCASS 
+IN A STRING
+
+Q2:  WRITE A PROGRAMME TO PRINT THE HIGHEST FREQUENCY CHARACTER 
+IN A STRING
+
+Q3: WRITE A PROGRAMME TO REMOVE BLANK SPACE IN A STRING 
+
+Q4 : WRITE A PROGRAMME TO REPLACE LOWERCLASS LETTERS WITH UPPERCLASS 
+& VICE VERSE IN A STRING 
+
+
+
+
+CHAPTER 9 STRUCTURES  : IMPORTANT TOPIC
+
+
+
+
+WRITE A PROGRAMME TO STORE THE DATA OF 1 STUDENTS.
+
+# include <stdio.h>
+# include <string.h>
+
+ //user defiend 
+ struct student {
+    int roll;
+    float cgpa;
+    char name[100];
+ };
+
+ int main() {
+    struct student s1;
+    s1.roll = 1637;
+    s1.cgpa = 9.7;
+    //s1.name = "muqtadir";
+    strcpy(s1.name,"muqtadir");
+
+    printf("student name = %s\n", s1.name);
+    printf("student roll no = %d\n", s1.roll);
+    printf("student cgpa = %f\n" , s1.cgpa);
+
+    return 0;
+ }
+
+
+
+
+
+
+WRITE A PROGRAMME TO STORE THE DATA OF 3 STUDENTS.
+
+
+# include <stdio.h>
+# include <string.h>
+
+ //user defiend 
+ struct student {
+    int roll;
+    float cgpa;
+    char name[100];
+ };
+
+ int main() {
+    struct student s1;
+    s1.roll = 1637;
+    s1.cgpa = 9.7;
+    //s1.name = "muqtadir";
+    strcpy(s1.name,"muqtadir");
+
+    printf("student name = %s\n", s1.name);
+    printf("student roll no = %d\n", s1.roll);
+    printf("student cgpa = %f\n" , s1.cgpa);
+
+struct student s2;
+    s2.roll = 1638;
+    s2.cgpa = 8.7;
+    //s2.name = "juned";
+    strcpy(s2.name,"juned");
+
+    printf("student name = %s\n", s2.name);
+    printf("student roll no = %d\n", s2.roll);
+    printf("student cgpa = %f\n" , s2.cgpa);
+
+struct student s3;
+    s3.roll = 1639;
+    s3.cgpa = 7.4;
+    //s3.name = "hamza";
+    strcpy(s3.name,"hamza");
+
+    printf("student name = %s\n", s3.name);
+    printf("student roll no = %d\n", s3.roll);
+    printf("student cgpa = %f\n" , s3.cgpa);
+
+    return 0;
+ }
+
+
+
+
+
+
+
+ENTER ADDRESS (HOUSE NO , BLOCK, CITY, STATE) OF 5 PEOPLE
+
+NAHI KIYA BAHUT BADA CODE THA 
+
+
+
+
+
+
+Q57 : CRETAE A STRUCTRE TO STORE VECTORS. THEN MAKE A FUNCTION 
+TO RETURN SUM OF 2 VECTORS
+
+OUTPUT NAHI AAYA ISKA 
+
+
+# include <stdio.h>
+# include <string.h>
+
+ //user defiend 
+typedef struct student {
+    int roll;
+    float cgpa;
+    char name[100];
+} stu ;
+
+ typedef struct computerengineeringstudent {
+    int roll;
+    float cgpa;
+    char name[100];
+ } coe;
+
+ struct address {
+    int houseNo;
+    int block;
+    char city[100];
+    char state[100];
+ };
+
+ struct vector {
+    int x;
+    int y;
+ };
+
+void calcSum(struct vector v1, struct vector v2, struct vector sum);
+
+ int main(){
+    struct vector v1 = {5, 10};
+    struct vector v2 = {3, 7};
+    struct vector sum = {0};
+
+    calcSum(v1, v2, sum);
+    return 0;
+ }
+
+void calcSum(struct vector v1, struct vector v2, struct vectotr sum);
+sum.x = v1.x + v2.x;
+sum.y = v1.y + v2.y;
+
+printf("sum of x is : %d\n", sum.x);
+printf("sum of y is : %d\n", sum.y);
+
+
+
+
+
+
+
+CREATE A STRUCTURES TO STORE COMPLEX NUMBERS. (USE ARROW OPPERATORS)
+
+9 HRS 16 MIN 
+
+Q 57 KA HI PART HAI
+ 
+CODE BADA HAI ISKA TO MAINE NAHI KIYA 

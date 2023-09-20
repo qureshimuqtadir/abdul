@@ -1,0 +1,492 @@
+DO WHILE LOOP TYPE
+PRINT THE NUMBER FROM 1 TO 5
+
+
+#include<stdio.h>
+
+int main() {
+int i = 1;
+do {
+    printf("%d\n" ,i);
+    i++;
+} while(i<=5);
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+PRINT THE NUMBER FROM 5 TO 1 IN DO WHILE TYPE
+
+
+#include<stdio.h>
+
+int main() {
+int i = 5;
+do {
+    printf("%d\n" ,i);
+    i--;
+} while(i>=1);
+
+return 0;
+}
+
+
+
+
+PRINT THE TABLE 
+
+PRINT THE TABLE OF A NUMBER INPUT BY THE USER n=45
+
+
+#include<stdio.h>
+
+int main() {
+    int n;
+    printf("enter number : ");
+    scanf("%d", &n);
+
+    for(int i=1; i<=10; i++) {
+        printf("%d \n" , n*i);
+    }
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+PRINT REVERSE OF THE TABLE FOR A NUMBER n. n=2 
+
+
+#include<stdio.h>
+
+int main() {
+    int n;
+    printf("enter number : ");
+    scanf("%d" , &n);
+
+    for (int i=10; i>=1; i--){
+       printf("%d\n", n * i);
+    }
+
+return 0;
+}
+
+
+
+
+
+
+
+
+KEEP TAKING NUMBER AS INPUT FROM USER UNTIL USER ENTERS AN ODD NUMBER 
+ ( EVEN NUMBER HI LIKH KAR AANA CHAHIYE ODD NUMBER LIKH KAR AYEGA TO THANKYOU LIKH KAR AYEGA )
+
+
+#include<stdio.h>
+
+int main() {
+    int n;
+   do {
+    printf("enter number : ");
+    scanf("%d",&n);
+    printf("%d\n",n);
+
+    if(n % 2 != 0) {
+           break;
+    }
+
+   } while(1);
+   printf("thank you");
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+KEEP TAKING NUMBER AS INPUT FROM USER UNTIL USER ENTERS A NUMBER WHICH IS MULTIPLE OF 7
+ 7 SE JO NUMBER MULTIPLY HOGA WO NUMBER LIKH KAR AATA HAI TO THANKYOU LIKH KAR AYEGA 
+
+
+#include<stdio.h>
+
+int main() {
+    int n;
+   do {
+    printf("enter number : ");
+    scanf("%d",&n);
+    printf("%d\n",n);
+
+    if(n % 7 == 0) {
+           break;
+    }
+
+   } while(1);
+   printf("thank you \n");
+
+return 0;
+}
+
+
+
+
+
+
+
+PRINT ALL NUMBER FROM 1 TO 5 EXCEPT 3 
+
+#include<stdio.h>
+
+int main() {
+    for(int i=1; i<=5; i++) {
+        if(i ==3) {
+            continue;
+        }
+printf("%d \n",i);
+    }
+    
+return 0;
+}
+
+
+
+
+
+
+
+PRINT ALL THE ODD NUMBER FROM 5 TO 50 
+
+
+#include<stdio.h>
+
+int main() {
+    for(int i=5; i<=50; i++) {
+        if(i % 2 !=0) {
+      printf("%d\n",i);
+        }
+    }
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+PRINT THE FACTORIAL OF A NUMBER n
+
+#include<stdio.h>
+
+int main() {
+    int n;
+    printf("enter number : ");
+    scanf("%d" , &n);
+
+    int fact = 1;
+    for (int i=1; i<=n; i++){
+        fact = fact * i;
+    }
+
+printf("final factorial is %d", fact);
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+CALCULATE THE SUM OF ALL NUMBER BETWEEN 5 AND 50. (INCLUDEING 5 & 50)
+( 5 SE LE KAR 50 TAK SABHI NUMBER KO ADD KAR KE BATAYE )
+
+#include<stdio.h>
+
+int main() {
+    int sum = 0;
+    for(int i=5; i<=50; i++) {
+        sum += i;
+    }
+       
+       printf("sum id %d", sum);
+
+       return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRITE 2 FUNCTION ONE TO PRINT 'HELLO' AND SECOND TO PRINT 'GOODBYE' .
+
+#include<stdio.h>
+
+void printHello();
+void printGoodbye();
+
+int main() {
+    printHello();
+    printGoodbye();
+    return 0;
+}
+
+
+void printHello(){
+    printf("Hello!\n");
+}
+
+void printGoodbye() {
+    printf("Goodbye\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRINT "HELLO WORLD" 10 TIMES BY RECUCURSION TYPE
+
+
+#include<stdio.h>
+
+void printHW(int count);
+
+int main() {
+printHW(10);
+return 0;
+}
+
+
+void printHW(int count){
+    if(count == 0) {
+        return;
+    }
+    printf("Hello World\n");
+    printHW(count-1);
+}
+
+
+
+
+
+
+
+
+WRITE A FUNCTION TO CONVERT CELSIUS TO FARHENHEIT
+
+
+#include<stdio.h>
+
+float convertTemp(float celsius);
+
+int main() {
+float far = convertTemp(37);
+printf("far : %f", far);
+return 0;
+}
+
+float convertTemp(float celsius) {
+    float far = celsius * (9.0/5.0) + 32;
+    return far;
+}
+
+
+
+
+
+
+
+WRITE A FUNCTION TO CALCULATE PERCENTAGE OF A STUDENT FROM MARKS IN SCIENCE , MATHS AND SANSKRIT
+
+#include<stdio.h>
+
+int calcPercentage(int science, int maths, int sanskrit);
+
+int main() {
+    int sc = 98;
+    int math = 95;
+    int sanskrit = 99;
+
+    printf("percentage is :%d", calcPercentage(sc, math, sanskrit));
+    return 0;
+}
+
+int calcPercentage(int science, int maths, int sanskrit) {
+    return((science + maths + sanskrit) / 3);
+}
+
+
+
+
+
+
+
+
+
+
+
+WRITE A FUNCTION TO PRINT n TERMS OF THE FIBONACCI SEQUENCE.
+n=6
+
+	 	
+#include<stdio.h>
+
+int fib(int n);
+
+int main() {
+    printf("%d", fib(6));
+    return 0;
+}
+
+int fib(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+
+    int fibNm1 = fib(n-1);
+    int fibNm2 = fib(n-2);
+    int fibN = fibNm1 + fibNm2;
+    int fib = ("fib of%d is : %d\n",n, fibN);
+    return fibN;
+}
+
+
+
+
+
+
+
+
+
+
+PRINT THE VALUE OF I FROM ITS POINTER TO POINTER 
+
+#include<stdio.h>
+
+int main() {
+int i = 5;
+int *ptr = &i;
+int **pptr = &ptr;
+
+printf("%d\n", **pptr);
+return 0;
+}
+
+
+
+
+
+
+
+
+SWAP 2 NUMBER A AND B
+
+#include<stdio.h>
+
+void swap(int a, int b);
+void _swap(int *a, int *b);
+
+int main() {
+int x = 3, y=5;
+_swap(&x, &y);
+printf("x = %d & y = %d\n", x, y);
+
+
+return 0;
+}
+
+//call by reference
+void _swap(int *a, int *b) {
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRITE A FUNCTION TO CALCULATE THE SUM , PRODUCT , AVERAGE OF 2 NUMBERS . PRINT THAT AVERAGE
+IN THE MAIN FUNCTION .
+
+
+#include<stdio.h>
+
+void doWork(int a, int b, int *sum, int *prod, int *avg);
+
+int main() {
+    int a = 3, b = 5;
+int sum, prod, avg;
+doWork(a, b, &sum, &prod, &avg);
+
+printf("sum =  %d, prod = %d, avg =%d\n", sum, prod, avg);
+return 0;
+}
+
+void doWork(int a, int b, int *sum, int *prod, int*avg) {
+    *sum = a+b;
+    *prod = a*b;
+    *avg = (a+b)/2;
+}
+

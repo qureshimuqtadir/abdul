@@ -1,0 +1,254 @@
+
+
+CHAPTER 7 ( ARRAYS )
+
+WRITE A PROGRAMME TO ENTER PRICE OF 3 ITEMS & PRINT THEIR FINAL COST WITH GST
+
+
+#include<stdio.h>
+
+int main(){
+float price[3];
+printf("enter 3 prices : ");
+scanf("%f", &price[0]);
+scanf("%f", &price[1]);
+scanf("%f", &price[2]);
+
+printf("total price 1 : %f\n", price[0]+(0.18*price[0]));
+printf("total price 2 : %f\n", price[0]+(0.18*price[1]));
+printf("total price 3 : %f\n", price[0]+(0.18*price[2]));
+return 0;
+}
+
+
+
+
+
+
+WRITE A FUNCTION TO COUNT THE NUMBER OF ODD NUMBERS IN AN ARRAY.
+ 
+
+#include<stdio.h>
+
+int countOdd(int arr[], int n);
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6,};
+    printf("%d", countOdd(arr, 6));
+    return 0;
+}
+
+int countOdd(int arr[], int n){
+    int count = 0;
+    for(int i=0; i<n; i++) {
+        if (arr[i] % 2 != 0) { // odd
+        count++;
+        }
+    }
+    
+    return count;
+}
+
+
+
+
+
+
+
+WRITE A FUNCTION TO REVERSE AN ARRAY.
+
+
+#include<stdio.h>
+
+int countOdd(int arr[], int n);
+void reverse(int arr[], int n);
+void printArr(int arr[], int n);
+
+int main() {
+      int arr[] = {1, 2, 3, 4, 5,};
+    reverse(arr,5);
+    printArr(arr, 5);
+    return 0;
+}
+
+void printArr(int arr[], int n) {
+    for (int i=0; i<n; i++) {
+        printf("%d\t", arr[i]);
+    }
+    printf("\n");
+}
+
+void reverse(int arr[], int n) {
+    for(int i=0; i<n/2; i++) {
+        int firstVal = arr[i];
+        int secondVal = arr[n-i-1];
+        arr[i] = secondVal;
+        arr[n-i-1] = firstVal;
+        }
+}
+
+
+
+
+
+
+
+CREATE A 2D ARRAY , STORING THE TABLES OF 2 & 3
+OUTPUT NAHI AAYA ISKA   
+
+
+
+ #include <stdio.h>
+
+// int countOdd(int arr[], int n);
+// void reverse(int arr[], int n);
+// void printArr(int arr[], int n);
+
+void storeTable(int arr[][], int n, int m, int number);
+
+int main() {
+    int tables[2] [10];
+    storeTable(tables, 0, 10, 2);
+    storeTable,(tables, 1,10, 3);
+
+
+for(int i=0; i<10; i++) { // 0 to 10
+printf("%d\t", tables[0] [i]);
+}
+
+printf("\n");
+for(int i=0; i<10; i++) { // 0 to 10 
+printf("%d\t", tables[1][i]);
+}
+printf("\n");
+return 0;
+ }
+
+void storeTable(int arr[] [10], int n, int m, int number)
+for(int i=0; i<m; i++) { // 0 to 10 
+arr[n][i] = number * (i+1); //2, 4, 6, 8, 10...
+}
+ 
+
+
+
+
+
+
+
+
+CRETE A STRING FIRST NAME AND LAST NAME TO STORE DETAILS OF USER 
+AND PRINT ALL THE CHARACTER USING A LOOP
+
+# include <stdio.h>
+
+void printString(char arr[]);
+
+int main() {
+    char firstName[] = "Muqtadir";
+    char lastName[] = "Qureshi";
+
+    printString(firstName);
+    printString(lastName);
+    return 0;
+}
+
+void printString(char arr[]) {
+    for(int i=0; arr[i] != '\0' ; i++) {
+        printf("%c", arr[i]);
+    }
+    printf("\n");
+}
+
+
+
+
+
+
+
+
+ASK THE USER TO ENTER THEIR FIRST NAME AND PRINT IT BACK TO THEM.
+ALSO TRY THIS WITH THEIR FULL NAME .
+
+
+
+
+
+
+
+
+MAKE A PROGRAMME THAT INPUTS USER NAME AND PRINT ITS LENGTH.
+USER KA NAME KA LENA HAI AUR USKI LENGTH LIKH KAR AYEGI 
+
+
+# include <stdio.h>
+
+void printString(char arr[]);
+int countLength(char arr[]);
+
+int main() {
+    char name[100];
+     fgets(name, 100, stdin);
+    printf("Length is ; %d" , countLength(name));
+    return 0;
+}
+
+int countLength(char arr[]) {
+    int count = 0;
+    for(int i=0; arr[i]!='\0'; i++){
+        count++;
+    }
+return count-1;
+}
+
+void printString(char arr[]) {
+    for(int i=0; arr[i] != '\0' ; i++) {
+        printf("%c", arr[i]);
+    }
+    printf("\n");
+}
+
+
+
+
+TAKE A STRING INPUT FROM THE USER USING %C . 
+
+NAHI KARA OR NAHI SAMJHA
+
+
+FIND THE SALETED FORM OF A PASSWORD ENTERED BY USER IF THE SALT IS 
+1234 AND ADDED AT THE END
+
+NAHI KARA OR NAHI SAMJHA 
+
+
+
+
+
+
+
+
+WRITE A FUNCTION TO COUNT THE OCCURENCE OF VOWELS IN A STRING
+VOWELS KITNE HAI WO COUNT KARNA HAI HUME LIKE HELLO WORLD ME KITNE VOWELS HAI 
+
+
+# include <stdio.h>
+# include <string.h>
+
+int countVowels(char str[]);
+
+int main() {
+    char str[] = "HelloWorld";
+    printf("vowels are : %d", countVowels(str));
+}
+
+int countVowels(char str[]) {
+    int count = 0;
+
+    for(int i=0; str[i] !='\0'; i++) {
+        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'o' || str[i] == 'u') {
+            count++;
+        }
+    }
+    return count;
+}
